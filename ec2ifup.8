@@ -18,7 +18,7 @@ commands may be used to configure (or, respectively, deconfigure) a network
 interface based on its definition in the instance metadata store. The resulting
 configuration will be stored in /etc/sysconfig/network-scripts.
 
-These scripts take one argument: the name of the network interface (e.g. eth0).
+These scripts take one argument: the name of the network interface (e.g. ens5).
 If the configuration for this interface is present and defines EC2SYNC=no, the
 scripts will exit without making changes. Otherwise, the configuration will be
 replaced or removed.

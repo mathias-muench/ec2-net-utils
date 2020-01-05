@@ -30,7 +30,7 @@ fi
 export HWADDR
 
 # generate a routing table number
-RTABLE=${INTERFACE#eth}
+RTABLE=${INTERFACE#ens}
 let RTABLE+=10000
 
 metadata_base="http://169.254.169.254/latest/meta-data/network/interfaces/macs"
@@ -143,7 +143,7 @@ get_ipv6_gateway() {
 }
 
 remove_primary() {
-  if [ "${INTERFACE}" == "eth0" ]; then
+  if [ "${INTERFACE}" == "ens5" ]; then
     return
   fi
   logger --tag ec2net "[remove_primary] Removing configs for ${INTERFACE}"
@@ -154,7 +154,7 @@ remove_primary() {
 }
 
 rewrite_primary() {
-  if [ "${INTERFACE}" == "eth0" ]; then
+  if [ "${INTERFACE}" == "ens5" ]; then
     return
   fi
   logger --tag ec2net "[rewrite_primary] Rewriting configs for ${INTERFACE}"
@@ -247,7 +247,7 @@ rewrite_aliases() {
 }
 
 remove_rules() {
-  if [ "${INTERFACE}" == "eth0" ]; then
+  if [ "${INTERFACE}" == "ens5" ]; then
     return
   fi
   logger --tag ec2net "[remove_rules] Removing rules for ${INTERFACE}"
@@ -264,7 +264,7 @@ remove_rules() {
 }
 
 rewrite_rules() {
-  if [ "${INTERFACE}" == "eth0" ]; then
+  if [ "${INTERFACE}" == "ens5" ]; then
     return
   fi
   ips=($(get_ipv4s))

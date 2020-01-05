@@ -7,7 +7,7 @@
 Name:      ec2-net-utils
 Summary:   A set of network tools for managing ENIs
 Version:   1.2
-Release:   1.1%{?dist}
+Release:   1p1.1%{?dist}
 License:   MIT and GPLv2
 Group:     System Tools
 Source0:   53-ec2-network-interfaces.rules.systemd

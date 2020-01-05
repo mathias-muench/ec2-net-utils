@@ -128,7 +128,7 @@ if [ "$INTERFACE_NAME" ]; then
 	# if a rule using the current name already exists, find a new name
 	#if interface_name_taken; then
 	#	INTERFACE="$basename$(find_next_available "$basename[0-9]*")"
-	#	# prevent INTERFACE from being "eth" instead of "eth0"
+	#	# prevent INTERFACE from being "ens" instead of "ens5"
 	#	[ "$INTERFACE" = "${INTERFACE%%[ \[\]0-9]*}" ] && INTERFACE=${INTERFACE}0
 	#	echo "INTERFACE_NEW=$INTERFACE"
 	#fi
